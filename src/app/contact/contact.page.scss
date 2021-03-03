@@ -1,0 +1,68 @@
+ion-title{font-family: 'Josefin Sans', sans-serif;}
+h1{font-size: 16px;
+        font-family: 'Josefin Sans', sans-serif;}
+p{font-family: 'Josefin Sans', sans-serif; 
+        font-size: 14px;
+    color:black;}
+ion-icon {font-size: 20px;}
+ion-input{font-size: 12;
+            height: 20px;
+            margin-bottom: 10px;
+            border: 1px solid #0a0a0a;
+            border-radius: 6px !important;
+            color: black;
+            font-family: 'Times New Roman', Times, serif;}
+ion-button{height: 22px;
+font-size: 12;
+font-family: 'Josefin Sans', sans-serif;}
+ion-textarea{margin-bottom: 10px;
+                    border: 1px solid #0a0a0a;
+                    border-radius: 6px !important;
+                    color: black;}
+
+fieldset{height: 198px;
+            width: 250px;
+                        margin:auto}
+                        ion-card {
+                            height: 550px;
+                            width: 308px;
+                            margin:auto;
+                            border-radius: 0px !important;}
+                            ion-label{
+                            font-family: 'Josefin Sans', sans-serif;    
+                        }ion-item{
+                            width: 260px;
+                            margin-bottom: 0.1px;
+                            border:none;
+                        }
+                        label{
+                            color:black;
+                            font-family: 'Josefin Sans', sans-serif; 
+                            padding:0.1px ;   
+                        }
+                        ion-content {
+                              
+                            --background: rgba(237, 242, 245, .8);
+                          
+                            .back-blob {
+                              z-index: -1;
+                              width: 600px;
+                              position: absolute;
+                              left: -50%;
+                              top: 0;
+                            }
+                            ion-toolbar {
+                                --background: transparent;
+                                background-color: #e5ecf1;
+                              
+                                ion-title {
+                                  padding: 20px 0 46px 0;
+                                  font-weight: 900;
+                                  background-color: #e5ecf1;
+                                }
+                                ion-icon{
+                                    color: black;
+                                    background-color: #e5ecf1; 
+                                }
+                        }
+                    }

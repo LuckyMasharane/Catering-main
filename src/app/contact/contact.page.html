@@ -1,0 +1,57 @@
+<ion-content>
+  <ion-row>
+    <ion-col col-4><br>
+      <ion-card style="border: 2px solid;">
+        <ion-card-content fullscreen="true">
+          <ion-list>
+            <ion-header>
+              <ion-toolbar>
+                <div item-content style="display: flex; justify-content: space-between; width: 100%">
+                  <ion-icon name="arrow-back" routerLink=""></ion-icon>
+                  <ion-title style="text-align: center;">Contact Us</ion-title>
+                  
+                </div>
+              </ion-toolbar>
+            </ion-header>
+            <ion-item></ion-item>
+            <ion-item>
+              <p>
+                <ion-icon name="navigate-circle-outline" color="primary"></ion-icon>&nbsp;7th Street . Midrand . 1632
+              </p>
+            </ion-item>
+            <ion-item>
+              <p>
+                <ion-icon name="mail-outline"></ion-icon>&nbsp;info@LCTScatering.co.za
+              </p>
+            </ion-item>
+            <ion-item>
+              <p>
+                <ion-icon name="call-outline"></ion-icon>&nbsp;0115646952 | 0786952465
+              </p>
+            </ion-item>
+          </ion-list>
+
+          <fieldset style="border:#0d0d0e 1px solid;">
+            <legend>
+              &nbsp;&nbsp;&nbsp;&nbsp;<ion-label color="dark">Enquiries</ion-label>
+            </legend>
+            <ion-input [(ngModel)]="firstName" placeholder="First Name & Surname"></ion-input>
+            <ion-input [(ngModel)]="Email" placeholder="E-mail..."></ion-input>
+            <ion-textarea [(ngModel)]="message" placeholder="Message..." style="height: 70px;"></ion-textarea>
+            <ion-button expand="block">Submit</ion-button>
+          </fieldset>
+
+          <br>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-toolbar color="none">
+    <div color="warning" style="text-align: center;">
+      <ion-icon name="logo-twitter" color='secondary'></ion-icon>
+      &nbsp;&nbsp;
+      <ion-icon name="logo-linkedin" color="primary"></ion-icon>
+      &nbsp;&nbsp;
+      <ion-icon name="logo-facebook" color="tertiary"></ion-icon>
+    </div>
+  </ion-toolbar>

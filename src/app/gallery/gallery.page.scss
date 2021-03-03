@@ -1,0 +1,27 @@
+
+
+ .button {
+    background-image: url ('http://www.laurelweddings.com/wp-content/uploads/2013/11/DSC_0632.jpg');
+    cursor:pointer;
+}
+    ion-toolbar {
+        --background: transparent;
+      
+       
+    }
+    ion-content {
+              
+        --background: rgba(237, 242, 245, .8);
+      
+        .back-blob {
+          z-index: -1;
+          width: 600px;
+          position: absolute;
+          left: -50%;
+          top: 0;
+        }
+        ion-card-content{
+            background: rgba(237, 242, 245, .8);
+        }
+       
+    }

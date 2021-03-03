@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Gallery</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+
+  <ion-searchbar showcancelbutton=""  [formControl]="searchControl"></ion-searchbar>
+
+  <ion-card *ngFor="let galleryPic of galleryPic">
+    <img src={{galleryPic.picture}}>
+    <ion-card-header>
+      <ion-card-subtitle>{{galleryPic.category}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-button color="dark" style="float: right; margin-bottom: 10px;">More info...</ion-button>
+  </ion-card>
+
+  <!-- <input type="button" name="button" class="button" routerLink='/decor' />
+  Decor
+  <input type="button" name="button" class="button2" routerLink='/food' />
+  Food
+  <input type="button" name="button" class="button3" routerLink='/equipment' />
+  Equipments -->
+
+</ion-content>
+<div style=" text-align:center"><a routerLink=''>Home</a>&nbsp;&nbsp;

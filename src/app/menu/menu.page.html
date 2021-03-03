@@ -1,0 +1,90 @@
+
+
+
+<ion-header class="ion-no-border">
+  <ion-toolbar  no-border>
+    
+  <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="banner">
+    <img src="../../assets/logo2.PNG" />
+
+    
+
+    <div class="search">
+      <ion-item lines="none" class="ion-no-padding">
+        <ion-icon slot="start" name="search-outline"></ion-icon>
+        <ion-input placeholder="Search events"></ion-input>
+      </ion-item>
+    </div>
+  </div>
+
+  <div class="title">
+    <h2>Popular Events</h2>
+
+   
+  </div>
+
+  <div class="event-slider">
+    <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }" class="default-right-padding">
+      <ion-slide>
+        <ion-col class="ion-text-left">
+          <ion-card>
+            <ion-card-header class="ion-no-padding">
+              <img src="../../assets/set-up one.jpg" />
+            </ion-card-header>
+
+            <ion-card-content>
+              <p class="date">17th July, 2020</p>
+              <h2 class="eventname"> Mini set up for Couples </h2>
+              <p class="location"><ion-icon name="location"></ion-icon>Midrand,Ebony</p>
+
+             
+                <div class="attendees">
+                  <div class="count">
+                  
+
+                </div>
+
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-slide>
+      <ion-slide>
+        <ion-col class="ion-text-left">
+          <ion-card>
+            <ion-card-header class="ion-no-padding">
+              <img src="../../assets/salad.jpg" />
+            </ion-card-header>
+
+            <ion-card-content>
+              <p class="date">23th July, 2020</p>
+              <h2 class="eventname">nini platters for picnic</h2>
+              <p class="location"><ion-icon name="location"></ion-icon>Clayville, Ext 4</p>
+
+              <div class="additional-info">
+                <div class="attendees">
+                 
+                  <div class="count">
+                   
+
+                    
+                  </div>
+                </div>
+
+               
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  
