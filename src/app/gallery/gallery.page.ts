@@ -4,16 +4,14 @@ import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Gallery } from '../gallery';
 import { GalleryService } from '../gallery.service';
-import { debounceTime } from "rxjs/operators"
 import * as _ from 'lodash'
-//import 'rxjs/add/operator/debounceTime';
 
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.page.html',
   styleUrls: ['./gallery.page.scss'],
 })
-export class GalleryPage {
+export class GalleryPage implements OnInit {
 
   public searchControl: FormControl;
   public searchTerm: string = "";
@@ -27,26 +25,17 @@ export class GalleryPage {
 
   filteredCategory:any = [];
 
-  constructor(private prod: GalleryService, private router: Router, public db: AngularFireDatabase) {
-    this.searchControl = new FormControl();
-  }
+  constructor(private prod: GalleryService, private router: Router, public db: AngularFireDatabase) {}
 
   ngOnInit() {
 
-    this.db.list('/gallery').valueChanges().subscribe(category =>{
+    this.db.list('/gallery').snapshotChanges().subscribe(category =>{
       this.category = category;
       this.applyFilters();
     })
 
-    
     this.getGallery();
-    // // this.setFilteredItems();
-    // this.setFilteredItems("");
 
-    // this.searchControl.valueChanges.pipe(debounceTime(700))
-    //   .subscribe(search => {
-    //     this.setFilteredItems(search);
-    //   });
   }
 
   private applyFilters(){
@@ -78,17 +67,12 @@ export class GalleryPage {
       this.category = res.map(gallery => {
         return {
           ...gallery.payload.doc.data(),
-          id: gallery.payload.doc.id
+          id: gallery.payload.doc.id,
+          
         } as Gallery
+        
       })
     })
   }
-  // onSearchInput() {
-  //   this.searching = true;
-  // }
-  // setFilteredItems(searchTerm) {
-  //   this.galleryPic = this.prod.filterItems(searchTerm);
-  // }
-
 
 }
