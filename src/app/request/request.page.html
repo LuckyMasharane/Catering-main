@@ -1,48 +1,58 @@
-<ion-header>
-  <ion-toolbar >
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Request</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <ion-row>
+    <ion-col col-4><br>
+      <ion-card style="border: 1px solid;">
+        <ion-card-content fullscreen="true">
+          <ion-list>
+            <ion-header>
+              <ion-toolbar>
+               
+                  <ion-icon name="arrow-back" routerLink=""></ion-icon>
+                  <ion-title style="text-align: center;">Request</ion-title>
+                  
+                
+              </ion-toolbar>
+            </ion-header>
+            
+          </ion-list>
 
-<ion-content fullscreen="true" >
-  <ion-item>
-    <ion-card>
-      <img src="../../assets/img/Request.png">
-    </ion-card>
-  </ion-item>
+          <fieldset style="border:#0d0d0e 1px solid;">
+            <legend>
+              &nbsp;&nbsp;&nbsp;&nbsp;<ion-label color="dark">Request</ion-label>
+            </legend>
+            <ion-input [(ngModel)]="firstName" placeholder="First Name & Surname"></ion-input>
+            <ion-input [(ngModel)]="Email" placeholder="E-mail..."></ion-input>
 
-  <form>
-    <ion-grid>
-      <ion-row>
-    
-        <ion-col>
-          <ion-input type="text" placeholder="Category" ></ion-input>
-        </ion-col>
-       
 
-      </ion-row>
-    </ion-grid>
-    <ion-input [(ngModel)]="Address"   placeholder="Address..." ></ion-input>
-    <ion-item>
-      
-      <ion-label>Event type</ion-label>
+            <ion-label>Event type</ion-label>
       <ion-select>
         <ion-select-option value="wedding">Wedding</ion-select-option>
         <ion-select-option value="birthday">Birthday</ion-select-option>
       </ion-select>
-    </ion-item>
+      <ion-label>Category</ion-label>
+      <ion-list>
+        <ion-item>
+          <ion-label>Food</ion-label>
+          <ion-checkbox slot="end" value="pepperoni" ></ion-checkbox>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Decor</ion-label>
+          <ion-checkbox slot="end" value="sausage" ></ion-checkbox>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Hiring Equipment</ion-label>
+          <ion-checkbox slot="end" value="mushrooms"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+            <ion-textarea [(ngModel)]="message" placeholder="Message..." style="height: 70px;"></ion-textarea>
+            <ion-button expand="block">Submit</ion-button>
+          </fieldset>
 
+          <br>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
  
-
-    <!-- <ion-fab vertical="bottom" horizontal="end" >
-      <ion-fab-button >
-        <ion-icon name="chevron-forward-outline"></ion-icon>
-      </ion-fab-button>
-    </ion-fab> -->
-    
-    <ion-textarea [(ngModel)]="message"   placeholder="Message..." style="height: 70px;" ></ion-textarea>
-  </form>
-</ion-content>
