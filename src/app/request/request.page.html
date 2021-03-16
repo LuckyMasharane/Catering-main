@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar >
+  <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -7,42 +7,39 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen="true" >
+<ion-content fullscreen="true">
   <ion-item>
     <ion-card>
       <img src="../../assets/img/Request.png">
     </ion-card>
   </ion-item>
 
-  <form>
+  <form [formGroup]="contactForm">
     <ion-grid>
       <ion-row>
-    
+
         <ion-col>
-          <ion-input type="text" placeholder="Category" ></ion-input>
+          <ion-input type="text" formControlName="category" placeholder="Category"></ion-input>
         </ion-col>
-       
+
 
       </ion-row>
     </ion-grid>
-    <ion-input [(ngModel)]="Address"   placeholder="Address..." ></ion-input>
+    <ion-input type="text" formControlName="address" placeholder="Address..."></ion-input>
     <ion-item>
-      
+
       <ion-label>Event type</ion-label>
-      <ion-select>
+      <ion-select formControlName="eventType">
         <ion-select-option value="wedding">Wedding</ion-select-option>
         <ion-select-option value="birthday">Birthday</ion-select-option>
       </ion-select>
     </ion-item>
+    <ion-textarea formControlName="message" placeholder="Message..." style="height: 100px;"></ion-textarea>
 
- 
-
-    <!-- <ion-fab vertical="bottom" horizontal="end" >
-      <ion-fab-button >
+    <ion-fab vertical="bottom" horizontal="end">
+      <ion-fab-button type="submit" (click)="onSubmit()">
         <ion-icon name="chevron-forward-outline"></ion-icon>
       </ion-fab-button>
-    </ion-fab> -->
-    
-    <ion-textarea [(ngModel)]="message"   placeholder="Message..." style="height: 70px;" ></ion-textarea>
+    </ion-fab>
   </form>
 </ion-content>

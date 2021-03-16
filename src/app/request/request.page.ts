@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { GalleryService } from '../gallery.service';
 
 @Component({
   selector: 'app-request',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RequestPage implements OnInit {
 
-  constructor() { }
+  public contactForm: FormGroup;
+
+  constructor(private _formBuilder: FormBuilder, private gallery: GalleryService) { }
 
   ngOnInit() {
+    this.contactForm = this._formBuilder.group({
+      id: Math.floor(Math.random() * 50),
+      category: "",
+      eventType: "",
+      message: "",
+      address: ""
+    });
+  }
+
+  onSubmit() {
+    this.gallery.addRequest(this.contactForm.value);
   }
 
 }
