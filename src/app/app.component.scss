@@ -5,7 +5,7 @@
 .menu-header-bg{
     height: 180px;
     width:350px;
-    background-color: gray;
+    background-color:#86979f;
     background: linear-gradient(90deg,gray 0%,transparent 100%);
     box-shadow:0px 1px 10px black ;
     transform: rotate(-15deg);
@@ -13,6 +13,7 @@
     margin-left: -18px;
     margin-top: -50px;
     margin-bottom: 60px;
+    
 
 }
 .header-content{
@@ -21,6 +22,7 @@
     left:15px;
     display: flex;
     align-items: center;
+    
 
     img{
         width: 80px;
@@ -66,7 +68,7 @@
 
     ion-content {
           
-        --background: rgba(237, 242, 245, .8);
+        --background:#86979f ;
       
         
     }
