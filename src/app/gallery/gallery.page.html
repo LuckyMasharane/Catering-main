@@ -9,33 +9,29 @@
 
 <ion-content fullscreen="true">
 
-  <!-- <ion-searchbar showcancelbutton=""  [formControl]="searchControl"></ion-searchbar> -->
-
-  <ion-item>
-    <ion-select [(ngModel)]="category" (change)="filterExact('category', category)" placeholder="Category">
-      <ion-select-option value="Food">Food</ion-select-option>
-      <ion-select-option value="Decor">Decor</ion-select-option>
-      <ion-select-option value="Equipment">Equipment</ion-select-option>
-    </ion-select>
-  </ion-item>
-  <ion-button *ngIf="category" color="danger" (click)="removeFilter('category')">
-    Remove filter
-  </ion-button>
-
-  <ion-card *ngFor="let category of category">
-    <img src={{category.picture}}>
+  <ion-card >
+    <img src="../../assets/img/salad.jpg">
     <ion-card-header>
-      <ion-card-subtitle>{{category.category}}</ion-card-subtitle>
+      <ion-card-subtitle>Food</ion-card-subtitle>
     </ion-card-header>
-    <ion-button color="dark" style="float: right; margin-bottom: 10px;">Quotation...</ion-button>
+    <ion-button color="dark" style="float: right; margin-bottom: 10px;">More..</ion-button>
   </ion-card>
 
-  <!-- <input type="button" name="button" class="button" routerLink='/decor' />
-  Decor
-  <input type="button" name="button" class="button2" routerLink='/food' />
-  Food
-  <input type="button" name="button" class="button3" routerLink='/equipment' />
-  Equipments -->
+  <ion-card >
+    <img src="../../assets/img/decor2.PNG">
+    <ion-card-header>
+      <ion-card-subtitle>Decor</ion-card-subtitle>
+    </ion-card-header>
+    <ion-button color="dark" style="float: right; margin-bottom: 10px;">More..</ion-button>
+  </ion-card>
+
+  <ion-card >
+    <img src="../../assets/img/equip1.PNG">
+    <ion-card-header>
+      <ion-card-subtitle>Equipment</ion-card-subtitle>
+    </ion-card-header>
+    <ion-button color="dark" style="float: right; margin-bottom: 10px;">More..</ion-button>
+  </ion-card>
 
 </ion-content>
 <div style=" text-align:center"><a routerLink=''>Home</a>&nbsp;&nbsp;
