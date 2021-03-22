@@ -1,34 +1,39 @@
-<ion-content>
-  <ion-row>
-    <ion-col col-4><br>
-      <ion-card style="border: 1px solid;">
-        <ion-card-content fullscreen="true">
-          <ion-list>
-            <ion-header>
-              <ion-toolbar>
-               
-                  <ion-icon name="arrow-back" routerLink=""></ion-icon>
-                  <ion-title style="text-align: center;">Request</ion-title>
-                  
-                
-              </ion-toolbar>
-            </ion-header>
-            
-          </ion-list>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Request</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-          <fieldset style="border:#0d0d0e 1px solid;">
-            <legend>
-              &nbsp;&nbsp;&nbsp;&nbsp;<ion-label color="dark">Request</ion-label>
-            </legend>
-            <ion-input [(ngModel)]="firstName" placeholder="First Name & Surname"></ion-input>
-            <ion-input [(ngModel)]="Email" placeholder="E-mail..."></ion-input>
+<ion-content fullscreen="true">
+  <ion-item>
+    <ion-card>
+      <img src="../../assets/img/Request.png">
+    </ion-card>
+  </ion-item>
+
+  <form [formGroup]="contactForm">
+    <ion-grid>
+      <ion-row>
+
+        <ion-col>
+          <ion-input type="text" formControlName="category" placeholder="Category"></ion-input>
+        </ion-col>
 
 
-            <ion-label>Event type</ion-label>
-      <ion-select>
+      </ion-row>
+    </ion-grid>
+    <ion-input type="text" formControlName="address" placeholder="Address..."></ion-input>
+    <ion-item>
+
+      <ion-label>Event type</ion-label>
+      <ion-select formControlName="eventType">
         <ion-select-option value="wedding">Wedding</ion-select-option>
         <ion-select-option value="birthday">Birthday</ion-select-option>
       </ion-select>
+<<<<<<< HEAD
       <ion-label>Category</ion-label>
       <ion-list>
         <ion-item>
@@ -49,10 +54,15 @@
             <ion-textarea [(ngModel)]="message" placeholder="Message..." style="height: 70px;"></ion-textarea>
             <ion-button  color ="dark"expand="block">Submit</ion-button>
           </fieldset>
+=======
+    </ion-item>
+    <ion-textarea formControlName="message" placeholder="Message..." style="height: 100px;"></ion-textarea>
+>>>>>>> c2e7dabd358e961837d8b4a191dda63ee4249d00
 
-          <br>
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-  </ion-row>
- 
+    <ion-fab vertical="bottom" horizontal="end">
+      <ion-fab-button type="submit" (click)="onSubmit()">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </form>
+</ion-content>
