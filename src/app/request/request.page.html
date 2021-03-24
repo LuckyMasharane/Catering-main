@@ -6,14 +6,12 @@
     <ion-title>Request</ion-title>
   </ion-toolbar>
 </ion-header>
-
+<br><br><br>
 <ion-content fullscreen="true">
-  <ion-item>
-    <ion-card>
-      <img src="../../assets/img/Request.png">
-    </ion-card>
-  </ion-item>
-
+ 
+<ion-card>
+  <h1>Request for your Service</h1>
+  <br>
   <form [formGroup]="contactForm">
     <ion-item>
       <ion-label>Category</ion-label>
@@ -35,10 +33,11 @@
       <ion-select formControlName="eventType">
         <ion-select-option value="wedding">Wedding</ion-select-option>
         <ion-select-option value="birthday">Birthday</ion-select-option>
+        <ion-select-option value="birthday">Year End Function</ion-select-option>
       </ion-select>
 
-
     </ion-item>
+    <br><br>
     <ion-textarea formControlName="message" placeholder="Message..." style="height: 100px;"></ion-textarea>
 
     <ion-fab vertical="bottom" horizontal="end">
@@ -47,6 +46,7 @@
       </ion-fab-button>
     </ion-fab>
   </form>
+</ion-card>
 </ion-content>
 <!-- <ion-content>
   <ion-row>
