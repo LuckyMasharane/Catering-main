@@ -9,6 +9,20 @@
 
 <ion-content fullscreen="true">
 
+<<<<<<< HEAD
+  <!-- <ion-searchbar showcancelbutton=""  [formControl]="searchControl"></ion-searchbar>  -->
+
+  <ion-item>
+    <ion-select [(ngModel)]="category" placeholder="Category">
+      <ion-select-option value="Food">Food</ion-select-option>
+      <ion-select-option value="Decor">Decor</ion-select-option>
+      <ion-select-option value="Equipment">Equipment</ion-select-option>
+    </ion-select>
+  </ion-item> 
+   <ion-button *ngIf="category" color="danger" (click)="removeFilter('category')">
+    Remove filter
+  </ion-button> 
+=======
   <ion-card >
     <img src="../../assets/img/salad.jpg">
     <ion-card-header>
@@ -16,12 +30,24 @@
     </ion-card-header>
     <ion-button color="dark" style="float: right; margin-bottom: 10px;">More..</ion-button>
   </ion-card>
+>>>>>>> c2e7dabd358e961837d8b4a191dda63ee4249d00
 
   <ion-card >
     <img src="../../assets/img/decor2.PNG">
     <ion-card-header>
       <ion-card-subtitle>Decor</ion-card-subtitle>
     </ion-card-header>
+<<<<<<< HEAD
+    <ion-button color="dark" style="float: right; margin-bottom: 10px;"   routerLink='/welcome'>Request...</ion-button>
+  </ion-card>
+
+   <!-- <input type="button" name="button" class="button" routerLink='/decor' />
+  Decor
+  <input type="button" name="button" class="button2" routerLink='/food' />
+  Food
+  <input type="button" name="button" class="button3" routerLink='/equipment' />
+  Equipments  -->
+=======
     <ion-button color="dark" style="float: right; margin-bottom: 10px;">More..</ion-button>
   </ion-card>
 
@@ -32,6 +58,7 @@
     </ion-card-header>
     <ion-button color="dark" style="float: right; margin-bottom: 10px;">More..</ion-button>
   </ion-card>
+>>>>>>> c2e7dabd358e961837d8b4a191dda63ee4249d00
 
 </ion-content>
-<div style=" text-align:center"><a routerLink=''>Home</a>&nbsp;&nbsp;
+<!-- <div style=" text-align:center"><a routerLink=''>Home</a>&nbsp;&nbsp; -->
