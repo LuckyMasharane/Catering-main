@@ -1,5 +1,6 @@
 <ion-header>
   <ion-toolbar>
+
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -7,35 +8,32 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen="true">
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let category of category ">
+        <ion-card>
+          <ion-card-header>
+            <img src={{category.picture}}>
+          </ion-card-header>
 
-  <!-- <ion-searchbar showcancelbutton=""  [formControl]="searchControl"></ion-searchbar>  -->
+          <ion-card-content>
+           
 
-  <ion-item>
-    <ion-select [(ngModel)]="category" placeholder="Category">
-      <ion-select-option value="Food">Food</ion-select-option>
-      <ion-select-option value="Decor">Decor</ion-select-option>
-      <ion-select-option value="Equipment">Equipment</ion-select-option>
-    </ion-select>
-  </ion-item> 
-   <ion-button *ngIf="category" color="danger" (click)="removeFilter('category')">
-    Remove filter
-  </ion-button> 
+            <ion-item>
+              <ion-icon name="remove" slot="start"></ion-icon>
+              <ion-label>{{category.name}}</ion-label>
+            </ion-item>
 
-  <ion-card >
-    <img src="../../assets/img/decor2.PNG">
-    <ion-card-header>
-      <ion-card-subtitle>Decor</ion-card-subtitle>
-    </ion-card-header>
-    <ion-button color="dark" style="float: right; margin-bottom: 10px;"   routerLink='/welcome'>Request...</ion-button>
-  </ion-card>
-
-   <!-- <input type="button" name="button" class="button" routerLink='/decor' />
-  Decor
-  <input type="button" name="button" class="button2" routerLink='/food' />
-  Food
-  <input type="button" name="button" class="button3" routerLink='/equipment' />
-  Equipments  -->
-
+            
+            <ion-item>
+              <ion-icon name="remove" slot="start"></ion-icon>
+              <ion-label>{{category.description}}</ion-label>
+            </ion-item>
+          </ion-card-content>
+          <ion-button color="dark" style="float: right;" routerLink='/welcome' >Request<ion-icon ></ion-icon></ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
-<!-- <div style=" text-align:center"><a routerLink=''>Home</a>&nbsp;&nbsp; -->
