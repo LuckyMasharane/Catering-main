@@ -8,8 +8,6 @@
 </ion-header>
 <br><br><br>
 <ion-content fullscreen="true">
-
-
   <form [formGroup]="contactForm">
     <ion-item>
       <ion-label>Category</ion-label>
@@ -19,24 +17,19 @@
         <ion-select-option value="Equipment">Equipment</ion-select-option>
       </ion-select>
       <!-- <ion-input type="text" formControlName="category" placeholder="Category"></ion-input> -->
-
     </ion-item>
     <ion-item>
-
       <ion-input type="text" formControlName="address" placeholder="Address..."></ion-input>
     </ion-item>
     <ion-item>
-
       <ion-label>Event type</ion-label>
       <ion-select formControlName="eventType">
         <ion-select-option value="wedding">Wedding</ion-select-option>
         <ion-select-option value="birthday">Birthday</ion-select-option>
         <ion-select-option value="endFunction">Year End Function</ion-select-option>
       </ion-select>
-
     </ion-item>
     <ion-item>
-
       <ion-textarea formControlName="message" placeholder="Message..." style="height: 100px;"></ion-textarea>
     </ion-item>
 
@@ -46,7 +39,7 @@
       </ion-fab-button>
     </ion-fab>
   </form>
-</ion-card>
+
 </ion-content>
 <!-- <ion-content>
   <ion-row>

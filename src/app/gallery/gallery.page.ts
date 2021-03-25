@@ -20,7 +20,7 @@ export class GalleryPage implements OnInit {
 
   galleryPic: any = [];
 
-  category:any;
+  category:any =[];
   filters ={};
 
   filteredCategory:any = [];
@@ -29,37 +29,37 @@ export class GalleryPage implements OnInit {
 
   ngOnInit() {
 
-    this.db.list('/gallery').snapshotChanges().subscribe(category =>{
-      this.category = category;
-      this.applyFilters();
-    })
+    // this.db.list('/gallery').snapshotChanges().subscribe(category =>{
+    //   this.category = category;
+    //   this.applyFilters();
+    // })
 
     this.getGallery();
 
   }
 
-  private applyFilters(){
-    this.filteredCategory = _.filter( this.category, _.conforms(this.filters))
-  }
-  filterExact(property: string, rule:any){
-    this.filters[property] = val => val == rule;
-    this.applyFilters()
-  }
+  // private applyFilters(){
+  //   this.filteredCategory = _.filter( this.category, _.conforms(this.filters))
+  // }
+  // filterExact(property: string, rule:any){
+  //   this.filters[property] = val => val == rule;
+  //   this.applyFilters()
+  // }
 
-  filterBoolean(property:string, rule:boolean){
-    if (!rule){
-      this.removeFilter(property)
-    }else{
-      this.filters[property] = val => val
-      this.applyFilters();
-    }
-  }
+  // filterBoolean(property:string, rule:boolean){
+  //   if (!rule){
+  //     this.removeFilter(property)
+  //   }else{
+  //     this.filters[property] = val => val
+  //     this.applyFilters();
+  //   }
+  // }
 
-  removeFilter(property: string){
-    delete this.filters[property]
-    this[property] = null
-    this.applyFilters()
-  }
+  // removeFilter(property: string){
+  //   delete this.filters[property]
+  //   this[property] = null
+  //   this.applyFilters()
+  // }
 
   getGallery() {
 

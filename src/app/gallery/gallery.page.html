@@ -12,17 +12,38 @@
 
   <!-- <ion-searchbar showcancelbutton=""  [formControl]="searchControl"></ion-searchbar>  -->
 
-  <ion-card >
+  <!-- <ion-card >
     <img src="../../assets/img/decor2.PNG">
     <ion-card-header>
       <ion-card-subtitle>Decor</ion-card-subtitle>
     </ion-card-header>
     <ion-button color="dark" style="float: right; margin-bottom: 10px;"   routerLink='/welcome'>Request...</ion-button>
-  </ion-card>
-
+  </ion-card> -->
+    <!-- <ion-card >
+    <img src="../../assets/img/decor2.PNG">
+    <ion-card-header>
+      <ion-card-subtitle>Decor</ion-card-subtitle>
+    </ion-card-header>
+    <ion-button color="dark" style="float: right; margin-bottom: 10px;"   routerLink='/welcome'>Request...</ion-button>
+  </ion-card> -->
+    <!-- <ion-card >
+    <img src="../../assets/img/decor2.PNG">
+    <ion-card-header>
+      <ion-card-subtitle>Decor</ion-card-subtitle>
+    </ion-card-header>
+    <ion-button color="dark" style="float: right; margin-bottom: 10px;"   routerLink='/welcome'>Request...</ion-button>
+  </ion-card> -->
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card *ngFor="let category of category">
+          <ion-card-header>
+            <img src={{category.picture}}>
+          </ion-card-header>
+          <ion-card-content>
             <ion-item>
               <ion-icon name="remove" slot="start"></ion-icon>
-              <ion-label>{{category.name}}</ion-label>
+              <ion-label>{{category.category}}</ion-label>
             </ion-item>
 
             
