@@ -11,17 +11,6 @@
 
   <!-- <ion-searchbar showcancelbutton=""  [formControl]="searchControl"></ion-searchbar>  -->
 
-  <ion-item>
-    <ion-select [(ngModel)]="category" placeholder="Category">
-      <ion-select-option value="Food">Food</ion-select-option>
-      <ion-select-option value="Decor">Decor</ion-select-option>
-      <ion-select-option value="Equipment">Equipment</ion-select-option>
-    </ion-select>
-  </ion-item> 
-   <ion-button *ngIf="category" color="danger" (click)="removeFilter('category')">
-    Remove filter
-  </ion-button> 
-
   <ion-card >
     <img src="../../assets/img/decor2.PNG">
     <ion-card-header>
