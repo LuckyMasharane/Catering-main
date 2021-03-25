@@ -12,7 +12,13 @@ export class RequestPage implements OnInit {
 
   public contactForm: FormGroup;
 
-  constructor(private _formBuilder: FormBuilder,private router: Router, private gallery: GalleryService) { }
+  category
+  cate:any=[]
+
+  constructor(private _formBuilder: FormBuilder,private router: Router, private gallery: GalleryService) {
+    // this.router.getCurrentNavigation().extras.state
+    // this.category = history.state
+   }
 
   ngOnInit() {
     this.contactForm = this._formBuilder.group({
@@ -28,5 +34,19 @@ export class RequestPage implements OnInit {
     this.gallery.addRequest(this.contactForm.value);
     this.router.navigate(['/gallery'])
   }
+
+  
+ addToRequest(category) {
+  // console.log(product);
+  let userId = localStorage.getItem('userID')
+  this.cate = {
+    userID: userId,
+    category
+  }
+  // console.log(this.cart);
+
+  this.gallery.addRequest(this.cate)
+
+}
 
 }

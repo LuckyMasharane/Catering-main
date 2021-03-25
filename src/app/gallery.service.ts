@@ -33,9 +33,10 @@ export class GalleryService {
         console.error("Error writing document: ", error);
       });
   }
+
   requestService(reqService){
-    this.db.collection("request").add(reqService).then(results => {
-      console.log("added");
+    this.db.collection("Request").add(reqService).then(results => {
+      console.log("added == " + results	);
     }
     ).catch(err => {
       console.log(err);

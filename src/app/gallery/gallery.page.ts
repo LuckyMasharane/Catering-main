@@ -74,5 +74,8 @@ export class GalleryPage implements OnInit {
       })
     })
   }
+  // ViewCategory(category) {
+  //   this.router.navigateByUrl('/welcome', { state: category });
+  // }
 
 }
