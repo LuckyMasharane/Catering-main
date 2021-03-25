@@ -1,5 +1,6 @@
 ion-title{font-family: 'Josefin Sans', sans-serif;}
-h1{font-size: 16px;
+h1{font-size: 20px;
+    text-align: center;
         font-family: 'Josefin Sans', sans-serif;}
 p{font-family: 'Josefin Sans', sans-serif; 
         font-size: 14px;
@@ -25,7 +26,8 @@ fieldset{height: 470px;
             width: 250px;
                         margin:auto}
                         ion-card {
-                            height: 650px;
+                            
+                            height: 400px;
                             width: 308px;
                             margin:auto;
                             border-radius: 0px !important;}
@@ -43,7 +45,7 @@ fieldset{height: 470px;
                         }
                         ion-content {
                               
-                            --background: rgba(219, 223, 226, 0.8);
+                            --background:  #e5ecf1;
                           
                             .back-blob {
                               z-index: -1;

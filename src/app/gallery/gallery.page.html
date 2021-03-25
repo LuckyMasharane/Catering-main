@@ -1,5 +1,6 @@
 <ion-header>
   <ion-toolbar>
+
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -19,12 +20,20 @@
     <ion-button color="dark" style="float: right; margin-bottom: 10px;"   routerLink='/welcome'>Request...</ion-button>
   </ion-card>
 
-   <!-- <input type="button" name="button" class="button" routerLink='/decor' />
-  Decor
-  <input type="button" name="button" class="button2" routerLink='/food' />
-  Food
-  <input type="button" name="button" class="button3" routerLink='/equipment' />
-  Equipments  -->
+            <ion-item>
+              <ion-icon name="remove" slot="start"></ion-icon>
+              <ion-label>{{category.name}}</ion-label>
+            </ion-item>
 
+            
+            <ion-item>
+              <ion-icon name="remove" slot="start"></ion-icon>
+              <ion-label>{{category.description}}</ion-label>
+            </ion-item>
+          </ion-card-content>
+          <ion-button color="dark" style="float: right;" routerLink='/welcome' >Request<ion-icon ></ion-icon></ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
-<!-- <div style=" text-align:center"><a routerLink=''>Home</a>&nbsp;&nbsp; -->
