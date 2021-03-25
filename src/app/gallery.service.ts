@@ -8,7 +8,7 @@ import { Request } from './request'
 export class GalleryService {
 
   galleryItem:any
-
+  userID = localStorage.getItem('userID');
   constructor( private db: AngularFirestore) { }
 
   getAllGallery(){
@@ -33,6 +33,14 @@ export class GalleryService {
         console.error("Error writing document: ", error);
       });
   }
+  requestService(reqService){
+    this.db.collection("request").add(reqService).then(results => {
+      console.log("added");
+    }
+    ).catch(err => {
+      console.log(err);
+    })
+  };
 
 
 }
