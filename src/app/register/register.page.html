@@ -20,22 +20,38 @@
 
   <div class="ion-padding">
 
-    <form class="ion-padding">
+    <form class="ion-padding" [formGroup]="validations_form">
 
       <div class="wrap-input">
-        <input class="input" type="text" name="user-name" placeholder="Full Name">
+        <input class="input" type="text" formControlName="fullname" name="user-name" placeholder="Full Name">
       </div>
 
       <div class="wrap-input">
-        <input class="input" type="text" name="user-email" placeholder="Email">
+        <input class="input" type="email" formControlName="email" name="user-email" placeholder="Email">
+      </div>
+      <div class="validation-errors">
+        <ng-container *ngFor="let validation of validation_messages.email">
+          <div class="error-message"
+            *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+            {{ validation.message }}
+          </div>
+        </ng-container>
       </div>
 
       <div class="wrap-input">
-        <input class="input" type="password" name="password" placeholder="Password">
+        <input class="input" type="password" formControlName="password" name="password" placeholder="Password">
+      </div>
+      <div class="validation-errors">
+        <ng-container *ngFor="let validation of validation_messages.password">
+          <div class="error-message"
+            *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+            {{ validation.message }}
+          </div>
+        </ng-container>
       </div>
 
       <div class="container-form-btn">
-        <button class="form-btn custom-font" routerLink='/login'>
+        <button class="form-btn custom-font" (click)="tryRegister()"  [disabled]="!validations_form.valid">
           Submit
         </button>
       </div>

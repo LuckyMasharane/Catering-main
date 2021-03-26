@@ -49,9 +49,8 @@ export class AutheticationService {
           console.log(message);
           firebase.database().ref('users/' + res.user.uid).set({
 
-            firstName: user.firstName,
+            fullname: user.fullname,
             email: user.email,
-            lastName: user.lastName,
             password: user.password
           });
           console.log(message);

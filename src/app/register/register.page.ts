@@ -34,11 +34,8 @@ export class RegisterPage implements OnInit {
         Validators.required,
         Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
       ])),
-      firstName: new FormControl(''),
-      lastName: new FormControl(''),
-      cellNumber: new FormControl('', Validators.compose([
-        Validators.required
-      ])),
+      fullname: new FormControl(''),
+
       password: new FormControl('', Validators.compose([
         Validators.minLength(5),
         Validators.required
@@ -52,12 +49,8 @@ export class RegisterPage implements OnInit {
 
   tryRegister() {
     this.authService.RegisterUser(this.validations_form.value)
-    this.router.navigate(["/login"]);
+    this.router.navigate(["/gallery"]);
     //this.authService.getCurrentUser();
-  }
-
-  goLoginPage() {
-    this.router.navigate(["/login"]);
   }
 
 }
